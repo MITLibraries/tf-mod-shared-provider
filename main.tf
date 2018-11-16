@@ -5,7 +5,7 @@
  */
 
 locals {
-  environment = "${lower(terraform.workspace)}"
+  environment = "${var.workspace != "" ? lower(var.workspace) : lower(terraform.workspace)}"
 }
 
 data "terraform_remote_state" "global" {
