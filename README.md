@@ -10,12 +10,13 @@ When you add a new shared resource, you will also need to update this module wit
 
 ## Outputs
 
-| Name             | Description                |
-| ---------------- | -------------------------- |
-| private_subnets  | List of private subnet IDs |
-| public_subnets   | List of public subnet IDs  |
-| vpc_id           | VPC ID                     |
-| public_zoneid    | Route53 Public Zone ID     |
-| public_zonename  | Route53 Public Zone Name   |
-| private_zoneid   | Route53 Private Zone ID    |
-| private_zonename | Route53 Private Zone Name  |
+| Name             | Description                   |
+| ---------------- | ----------------------------- |
+| private_subnets  | List of private subnet IDs    |
+| public_subnets   | List of public subnet IDs     |
+| vpc_id           | VPC ID                        |
+| public_zoneid    | Route53 Public Zone ID        |
+| public_zonename  | Route53 Public Zone Name      |
+| private_zoneid   | Route53 Private Zone ID       |
+| private_zonename | Route53 Private Zone Name     |
+| mitlib_cert      | \*.mitlib.net certificate arn |

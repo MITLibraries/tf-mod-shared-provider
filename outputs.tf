@@ -34,3 +34,8 @@ output "private_zonename" {
   description = "Route53 Private Zone name"
   value       = "${data.terraform_remote_state.global.private_zonename}"
 }
+
+output "mitlib_cert" {
+  description = "*.mitlib.net wildcard certificate"
+  value       = "${data.terraform_remote_state.global.mitlib_cert}"
+}
