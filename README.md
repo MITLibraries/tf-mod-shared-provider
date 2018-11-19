@@ -2,6 +2,12 @@ This module provides a layer of abstraction to accessing shared resources. It do
 
 When you add a new shared resource, you will also need to update this module with whatever outputs you want to provide access to.
 
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| workspace | TF workspace | string | `` | no |
+
 ## Outputs
 
 | Name | Description |
