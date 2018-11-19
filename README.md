@@ -4,15 +4,18 @@ When you add a new shared resource, you will also need to update this module wit
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| workspace | TF workspace | string | `` | no |
+| Name      | Description  |  Type  |  Default | Required |
+| --------- | ------------ | :----: | :------: | :------: |
+| workspace | TF workspace | string | `` \| no |          |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| private\_subnets | List of private subnet IDs |
-| public\_subnets | List of public subnet IDs |
-| vpc\_id | VPC ID |
-
+| Name             | Description                |
+| ---------------- | -------------------------- |
+| private_subnets  | List of private subnet IDs |
+| public_subnets   | List of public subnet IDs  |
+| vpc_id           | VPC ID                     |
+| public_zoneid    | Route53 Public Zone ID     |
+| public_zonename  | Route53 Public Zone Name   |
+| private_zoneid   | Route53 Public Zone ID     |
+| private_zonename | Route53 Public Zone Name   |
