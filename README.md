@@ -4,9 +4,9 @@ When you add a new shared resource, you will also need to update this module wit
 
 ## Inputs
 
-| Name      | Description  |  Type  |  Default | Required |
-| --------- | ------------ | :----: | :------: | :------: |
-| workspace | TF workspace | string | `` \| no |          |
+| Name      | Description  |  Type  | Default | Required |
+| --------- | ------------ | :----: | :-----: | :------: |
+| workspace | TF workspace | string |    "    |    no    |
 
 ## Outputs
 
@@ -17,5 +17,5 @@ When you add a new shared resource, you will also need to update this module wit
 | vpc_id           | VPC ID                     |
 | public_zoneid    | Route53 Public Zone ID     |
 | public_zonename  | Route53 Public Zone Name   |
-| private_zoneid   | Route53 Public Zone ID     |
-| private_zonename | Route53 Public Zone Name   |
+| private_zoneid   | Route53 Private Zone ID    |
+| private_zonename | Route53 Private Zone Name  |
