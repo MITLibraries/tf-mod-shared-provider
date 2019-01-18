@@ -33,3 +33,16 @@ data "terraform_remote_state" "network" {
     encrypt        = true
   }
 }
+
+data "terraform_remote_state" "es" {
+  backend   = "s3"
+  workspace = "${local.environment}"
+
+  config {
+    region         = "us-east-1"
+    bucket         = "mit-tfstates-state"
+    key            = "elasticsearch/terraform.tfstate"
+    dynamodb_table = "mit-tfstates-state-lock"
+    encrypt        = true
+  }
+}

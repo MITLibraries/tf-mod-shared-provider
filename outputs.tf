@@ -84,3 +84,13 @@ output "mit_saml_arn" {
   description = "MIT Identity provider arn (SAML Federated login)"
   value       = "${data.terraform_remote_state.global.mit_saml_arn}"
 }
+
+output "es_arn" {
+  description = "ARN of the Elasticsearch domain"
+  value       = "${data.terraform_remote_state.es.es_arn}"
+}
+
+output "es_endpoint" {
+  description = "Domain-specific endpoint used to submit index, search, and data upload requests"
+  value       = "${data.terraform_remote_state.es.es_endpoint}"
+}
