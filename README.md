@@ -9,14 +9,26 @@ When you add a new shared resource, you will also need to update this module wit
 | workspace | TF workspace | string |    "    |    no    |
 
 ## Outputs
+## Outputs
 
-| Name             | Description                   |
-| ---------------- | ----------------------------- |
-| private_subnets  | List of private subnet IDs    |
-| public_subnets   | List of public subnet IDs     |
-| vpc_id           | VPC ID                        |
-| public_zoneid    | Route53 Public Zone ID        |
-| public_zonename  | Route53 Public Zone Name      |
-| private_zoneid   | Route53 Private Zone ID       |
-| private_zonename | Route53 Private Zone Name     |
-| mitlib_cert      | \*.mitlib.net certificate arn |
+| Name | Description |
+|------|-------------|
+| alb\_restricted\_arn | Restricted ALB arn |
+| alb\_restricted\_arn\_suffix | The ARN suffix of the ALB |
+| alb\_restricted\_default\_target\_group\_arn | Restricted ALB default target group arn |
+| alb\_restricted\_dnsname | DNS name of ALB |
+| alb\_restricted\_http\_listener\_arn | Restricted ALB HTTP listener ARN |
+| alb\_restricted\_https\_listener\_arn | Restricted ALB HTTPS listener ARN |
+| alb\_restricted\_name | Restricted ALB name |
+| alb\_restricted\_sgid | Restricted ALB security group ID |
+| es\_arn | ARN of the Elasticsearch domain |
+| es\_endpoint | Domain-specific endpoint used to submit index, search, and data upload requests |
+| mit\_saml\_arn | MIT Identity provider arn (SAML Federated login) |
+| mitlib\_cert | *.mitlib.net wildcard certificate |
+| private\_subnets | List of private subnet IDs |
+| private\_zoneid | Route53 Private Zone ID |
+| private\_zonename | Route53 Private Zone name |
+| public\_subnets | List of public subnet IDs |
+| public\_zoneid | Route53 Public Zone ID |
+| public\_zonename | Route53 Public Zone name |
+| vpc\_id | VPC ID |
