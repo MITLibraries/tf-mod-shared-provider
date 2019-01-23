@@ -94,3 +94,13 @@ output "es_endpoint" {
   description = "Domain-specific endpoint used to submit index, search, and data upload requests"
   value       = "${data.terraform_remote_state.es.es_endpoint}"
 }
+
+output "es_read_policy_arn" {
+  description = "Default domain read only policy ARN"
+  value       = "${data.terraform_remote_state.es.read_policy_arn}"
+}
+
+output "es_write_policy_arn" {
+  description = "Default domain write policy ARN"
+  value       = "${data.terraform_remote_state.es.write_policy_arn}"
+}
