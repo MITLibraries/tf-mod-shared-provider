@@ -8,7 +8,7 @@ When you add a new shared resource, you will also need to update this module wit
 | --------- | ------------ | :----: | :-----: | :------: |
 | workspace | TF workspace | string |    "    |    no    |
 
-## Outputs
+
 ## Outputs
 
 | Name | Description |
@@ -23,6 +23,8 @@ When you add a new shared resource, you will also need to update this module wit
 | alb\_restricted\_sgid | Restricted ALB security group ID |
 | es\_arn | ARN of the Elasticsearch domain |
 | es\_endpoint | Domain-specific endpoint used to submit index, search, and data upload requests |
+| es\_read\_policy\_arn | Default domain read only policy ARN |
+| es\_write\_policy\_arn | Default domain write policy ARN |
 | mit\_saml\_arn | MIT Identity provider arn (SAML Federated login) |
 | mitlib\_cert | *.mitlib.net wildcard certificate |
 | private\_subnets | List of private subnet IDs |
@@ -31,4 +33,4 @@ When you add a new shared resource, you will also need to update this module wit
 | public\_subnets | List of public subnet IDs |
 | public\_zoneid | Route53 Public Zone ID |
 | public\_zonename | Route53 Public Zone name |
-| vpc\_id | VPC ID |
+| vpc\_id | VPC ID | ID of the VPC |
