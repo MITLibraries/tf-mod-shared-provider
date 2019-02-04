@@ -27,6 +27,7 @@ When you add a new shared resource, you will also need to update this module wit
 | es\_write\_policy\_arn | Default domain write policy ARN |
 | mit\_saml\_arn | MIT Identity provider arn (SAML Federated login) |
 | mitlib\_cert | *.mitlib.net wildcard certificate |
+| nat\_public\_ips | List of public Elastic IPs created for AWS NAT Gateway |
 | private\_subnets | List of private subnet IDs |
 | private\_zoneid | Route53 Private Zone ID |
 | private\_zonename | Route53 Private Zone name |

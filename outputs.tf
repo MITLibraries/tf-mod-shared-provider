@@ -1,4 +1,8 @@
-#Shared/network TFstate Outputs
+##########################
+##### Shared Network #####
+##########################
+
+##### VPC Outputs #####
 output "vpc_id" {
   description = "VPC ID"
   value       = "${data.terraform_remote_state.network.vpc_id}"
@@ -14,6 +18,12 @@ output "public_subnets" {
   value       = "${data.terraform_remote_state.network.public_subnets}"
 }
 
+output "nat_public_ips" {
+  description = "List of public Elastic IPs created for AWS NAT Gateway"
+  value       = "${data.terraform_remote_state.network.nat_public_ips}"
+}
+
+##### ALB Outputs #####
 output "alb_restricted_arn" {
   description = "Restricted ALB arn"
   value       = "${data.terraform_remote_state.network.alb_restricted_arn}"
@@ -54,7 +64,11 @@ output "alb_restricted_https_listener_arn" {
   value       = "${data.terraform_remote_state.network.alb_restricted_https_listener_arn}"
 }
 
-#Global TFState Outputs
+#########################
+##### Shared Global #####
+#########################
+
+##### DNS/Certs Outputs #####
 output "public_zoneid" {
   description = "Route53 Public Zone ID"
   value       = "${data.terraform_remote_state.global.public_zoneid}"
@@ -85,6 +99,7 @@ output "mit_saml_arn" {
   value       = "${data.terraform_remote_state.global.mit_saml_arn}"
 }
 
+##### AWS ElasticSearch Outputs #####
 output "es_arn" {
   description = "ARN of the Elasticsearch domain"
   value       = "${data.terraform_remote_state.es.es_arn}"
