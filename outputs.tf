@@ -119,3 +119,8 @@ output "es_write_policy_arn" {
   description = "Default domain write policy ARN"
   value       = "${data.terraform_remote_state.es.write_policy_arn}"
 }
+
+output "es_domain_name" {
+  description = "Domain name of cluster"
+  value       = "${data.terraform_remote_state.es.domain_name}"
+}
