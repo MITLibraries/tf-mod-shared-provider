@@ -13,6 +13,7 @@ When you add a new shared resource, you will also need to update this module wit
 
 | Name | Description |
 |------|-------------|
+| alb\_restricted\_all\_ingress\_sgid | Restricted ALB security group ID allowing all ingress traffic from ALB|
 | alb\_restricted\_arn | Restricted ALB arn |
 | alb\_restricted\_arn\_suffix | The ARN suffix of the ALB |
 | alb\_restricted\_default\_target\_group\_arn | Restricted ALB default target group arn |
