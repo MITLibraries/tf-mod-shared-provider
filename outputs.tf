@@ -64,6 +64,11 @@ output "alb_restricted_https_listener_arn" {
   value       = "${data.terraform_remote_state.network.alb_restricted_https_listener_arn}"
 }
 
+output "alb_restricted_all_ingress_sgid" {
+  description = "Restricted ALB security group ID allowing all ingress traffic from ALB"
+  value       = "${data.terraform_remote_state.network.alb_restricted_all_ingress_sgid}"
+}
+
 #########################
 ##### Shared Global #####
 #########################
