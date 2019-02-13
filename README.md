@@ -13,7 +13,16 @@ When you add a new shared resource, you will also need to update this module wit
 
 | Name | Description |
 |------|-------------|
-| alb\_restricted\_all\_ingress\_sgid | Restricted ALB security group ID allowing all ingress traffic from ALB|
+| alb\_public\_all\_ingress\_sgid | Public ALB security group ID allowing all ingress traffic from ALB |
+| alb\_public\_arn | Public ALB arn |
+| alb\_public\_arn\_suffix | The ARN suffix of the ALB |
+| alb\_public\_default\_target\_group\_arn | Public ALB default target group arn |
+| alb\_public\_dnsname | DNS name of ALB |
+| alb\_public\_http\_listener\_arn | Public ALB HTTP listener ARN |
+| alb\_public\_https\_listener\_arn | Public ALB HTTPS listener ARN |
+| alb\_public\_name | Public ALB name |
+| alb\_public\_sgid | Public ALB security group ID |
+| alb\_restricted\_all\_ingress\_sgid | Restricted ALB security group ID allowing all ingress traffic from ALB |
 | alb\_restricted\_arn | Restricted ALB arn |
 | alb\_restricted\_arn\_suffix | The ARN suffix of the ALB |
 | alb\_restricted\_default\_target\_group\_arn | Restricted ALB default target group arn |
@@ -23,7 +32,7 @@ When you add a new shared resource, you will also need to update this module wit
 | alb\_restricted\_name | Restricted ALB name |
 | alb\_restricted\_sgid | Restricted ALB security group ID |
 | es\_arn | ARN of the Elasticsearch domain |
-| es\_domain\_name| Domain name of cluster |
+| es\_domain\_name | Domain name of cluster |
 | es\_endpoint | Domain-specific endpoint used to submit index, search, and data upload requests |
 | es\_read\_policy\_arn | Default domain read only policy ARN |
 | es\_write\_policy\_arn | Default domain write policy ARN |
@@ -36,4 +45,4 @@ When you add a new shared resource, you will also need to update this module wit
 | public\_subnets | List of public subnet IDs |
 | public\_zoneid | Route53 Public Zone ID |
 | public\_zonename | Route53 Public Zone name |
-| vpc\_id | VPC ID | ID of the VPC |
+| vpc\_id | VPC ID |

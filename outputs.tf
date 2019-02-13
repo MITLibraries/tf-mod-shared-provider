@@ -24,6 +24,8 @@ output "nat_public_ips" {
 }
 
 ##### ALB Outputs #####
+
+# Restricted ALB
 output "alb_restricted_arn" {
   description = "Restricted ALB arn"
   value       = "${data.terraform_remote_state.network.alb_restricted_arn}"
@@ -67,6 +69,52 @@ output "alb_restricted_https_listener_arn" {
 output "alb_restricted_all_ingress_sgid" {
   description = "Restricted ALB security group ID allowing all ingress traffic from ALB"
   value       = "${data.terraform_remote_state.network.alb_restricted_all_ingress_sgid}"
+}
+
+# Public ALB
+output "alb_public_arn" {
+  description = "Public ALB arn"
+  value       = "${data.terraform_remote_state.network.alb_public_arn}"
+}
+
+output "alb_public_arn_suffix" {
+  description = "The ARN suffix of the ALB"
+  value       = "${data.terraform_remote_state.network.alb_public_arn_suffix}"
+}
+
+output "alb_public_name" {
+  description = "Public ALB name"
+  value       = "${data.terraform_remote_state.network.alb_public_name}"
+}
+
+output "alb_public_dnsname" {
+  description = "DNS name of ALB"
+  value       = "${data.terraform_remote_state.network.alb_public_dnsname}"
+}
+
+output "alb_public_sgid" {
+  description = "Public ALB security group ID"
+  value       = "${data.terraform_remote_state.network.alb_public_sgid}"
+}
+
+output "alb_public_default_target_group_arn" {
+  description = "Public ALB default target group arn"
+  value       = "${data.terraform_remote_state.network.alb_public_default_target_group_arn}"
+}
+
+output "alb_public_http_listener_arn" {
+  description = "Public ALB HTTP listener ARN"
+  value       = "${data.terraform_remote_state.network.alb_public_http_listener_arn}"
+}
+
+output "alb_public_https_listener_arn" {
+  description = "Public ALB HTTPS listener ARN"
+  value       = "${data.terraform_remote_state.network.alb_public_https_listener_arn}"
+}
+
+output "alb_public_all_ingress_sgid" {
+  description = "Public ALB security group ID allowing all ingress traffic from ALB"
+  value       = "${data.terraform_remote_state.network.alb_public_all_ingress_sgid}"
 }
 
 #########################
