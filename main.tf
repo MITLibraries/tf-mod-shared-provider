@@ -46,3 +46,16 @@ data "terraform_remote_state" "es" {
     encrypt        = true
   }
 }
+
+data "terraform_remote_state" "deploy" {
+  backend   = "s3"
+  workspace = "${local.environment}"
+
+  config {
+    region         = "us-east-1"
+    bucket         = "mit-tfstates-state"
+    key            = "deploy/terraform.tfstate"
+    dynamodb_table = "mit-tfstates-state-lock"
+    encrypt        = true
+  }
+}

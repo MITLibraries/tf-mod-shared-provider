@@ -177,3 +177,14 @@ output "es_domain_name" {
   description = "Domain name of cluster"
   value       = "${data.terraform_remote_state.es.domain_name}"
 }
+
+##### Deploy Outputs #####
+output "deploy_bucket" {
+  description = "Name of S3 bucket"
+  value       = "${data.terraform_remote_state.deploy.name}"
+}
+
+output "deploy_rw_arn" {
+  description = "Read/write policy for S3 bucket"
+  value       = "${data.terraform_remote_state.deploy.rw_arn}"
+}
