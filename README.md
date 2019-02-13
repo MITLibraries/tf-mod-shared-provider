@@ -31,6 +31,8 @@ When you add a new shared resource, you will also need to update this module wit
 | alb\_restricted\_https\_listener\_arn | Restricted ALB HTTPS listener ARN |
 | alb\_restricted\_name | Restricted ALB name |
 | alb\_restricted\_sgid | Restricted ALB security group ID |
+| deploy\_bucket | Name of S3 bucket |
+| deploy\_rw\_arn | Read/write policy for S3 bucket |
 | es\_arn | ARN of the Elasticsearch domain |
 | es\_domain\_name | Domain name of cluster |
 | es\_endpoint | Domain-specific endpoint used to submit index, search, and data upload requests |
