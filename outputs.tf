@@ -152,6 +152,13 @@ output "mit_saml_arn" {
   value       = "${data.terraform_remote_state.global.mit_saml_arn}"
 }
 
+##### Elastic Beanstalk Application Name Outputs #####
+
+output "docsvcs_app_name" {
+  description = "Name of Docsvcs Elastic Beanstalk application"
+  value       = "${data.terraform_remote_state.global.docsvcs_beanstalk_name}"
+}
+
 ##### AWS ElasticSearch Outputs #####
 output "es_arn" {
   description = "ARN of the Elasticsearch domain"
