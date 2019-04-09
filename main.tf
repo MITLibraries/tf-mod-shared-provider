@@ -59,3 +59,16 @@ data "terraform_remote_state" "deploy" {
     encrypt        = true
   }
 }
+
+data "terraform_remote_state" "bastion" {
+  backend   = "s3"
+  workspace = "${local.environment}"
+
+  config {
+    region         = "us-east-1"
+    bucket         = "mit-tfstates-state"
+    key            = "bastion/terraform.tfstate"
+    dynamodb_table = "mit-tfstates-state-lock"
+    encrypt        = true
+  }
+}
