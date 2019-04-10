@@ -31,6 +31,7 @@ When you add a new shared resource, you will also need to update this module wit
 | alb\_restricted\_https\_listener\_arn | Restricted ALB HTTPS listener ARN |
 | alb\_restricted\_name | Restricted ALB name |
 | alb\_restricted\_sgid | Restricted ALB security group ID |
+| bastion\_ingress\_sgid | Security Group ID for access from Bastion host |
 | deploy\_bucket | Name of S3 bucket |
 | deploy\_rw\_arn | Read/write policy for S3 bucket |
 | docsvcs\_app\_name | Name of Docsvcs Elastic Beanstalk application |

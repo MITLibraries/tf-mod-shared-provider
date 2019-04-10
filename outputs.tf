@@ -195,3 +195,9 @@ output "deploy_rw_arn" {
   description = "Read/write policy for S3 bucket"
   value       = "${data.terraform_remote_state.deploy.rw_arn}"
 }
+
+##### Bastion Outputs #####
+output "bastion_ingress_sgid" {
+  description = "Security Group ID for access from Bastion host"
+  value       = "${data.terraform_remote_state.bastion.ingress_from_bastion_sg_id}"
+}
