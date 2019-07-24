@@ -51,6 +51,11 @@ output "alb_restricted_sgid" {
   value       = "${data.terraform_remote_state.network.alb_restricted_sgid}"
 }
 
+output "alb_restricted_zone_id" {
+  description = "Zone ID for restricted ALB"
+  value       = "${data.terraform_remote_state.network.alb_restricted_zone_id}"
+}
+
 output "alb_restricted_default_target_group_arn" {
   description = "Restricted ALB default target group arn"
   value       = "${data.terraform_remote_state.network.alb_restricted_default_target_group_arn}"
@@ -95,6 +100,11 @@ output "alb_public_dnsname" {
 output "alb_public_sgid" {
   description = "Public ALB security group ID"
   value       = "${data.terraform_remote_state.network.alb_public_sgid}"
+}
+
+output "alb_public_zone_id" {
+  description = "Zone ID for public ALB"
+  value       = "${data.terraform_remote_state.network.alb_public_zone_id}"
 }
 
 output "alb_public_default_target_group_arn" {
