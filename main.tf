@@ -5,14 +5,14 @@
  */
 
 locals {
-  environment = "${var.workspace != "" ? lower(var.workspace) : lower(terraform.workspace)}"
+  environment = var.workspace != "" ? lower(var.workspace) : lower(terraform.workspace)
 }
 
 data "terraform_remote_state" "global" {
   backend   = "s3"
   workspace = "global"
 
-  config {
+  config = {
     region         = "us-east-1"
     bucket         = "mit-tfstates-state"
     key            = "global/global.tfstate"
@@ -23,9 +23,9 @@ data "terraform_remote_state" "global" {
 
 data "terraform_remote_state" "network" {
   backend   = "s3"
-  workspace = "${local.environment}"
+  workspace = local.environment
 
-  config {
+  config = {
     region         = "us-east-1"
     bucket         = "mit-tfstates-state"
     key            = "network/terraform.tfstate"
@@ -36,9 +36,9 @@ data "terraform_remote_state" "network" {
 
 data "terraform_remote_state" "es" {
   backend   = "s3"
-  workspace = "${local.environment}"
+  workspace = local.environment
 
-  config {
+  config = {
     region         = "us-east-1"
     bucket         = "mit-tfstates-state"
     key            = "elasticsearch/terraform.tfstate"
@@ -49,9 +49,9 @@ data "terraform_remote_state" "es" {
 
 data "terraform_remote_state" "deploy" {
   backend   = "s3"
-  workspace = "${local.environment}"
+  workspace = local.environment
 
-  config {
+  config = {
     region         = "us-east-1"
     bucket         = "mit-tfstates-state"
     key            = "deploy/terraform.tfstate"
@@ -62,9 +62,9 @@ data "terraform_remote_state" "deploy" {
 
 data "terraform_remote_state" "bastion" {
   backend   = "s3"
-  workspace = "${local.environment}"
+  workspace = local.environment
 
-  config {
+  config = {
     region         = "us-east-1"
     bucket         = "mit-tfstates-state"
     key            = "bastion/terraform.tfstate"
@@ -72,3 +72,4 @@ data "terraform_remote_state" "bastion" {
     encrypt        = true
   }
 }
+
