@@ -212,3 +212,10 @@ output "bastion_ingress_sgid" {
   value       = data.terraform_remote_state.bastion.outputs.ingress_from_bastion_sg_id
 }
 
+# IAM ROLES/PROFILES
+
+# SSM Profile name
+output "ssm_profile_name" {
+  description = "Name of the SSM profile for the GLOBAL environment"
+  value       = data.terraform_remote_state.core.outputs.ssm_profile_name
+}
