@@ -161,7 +161,13 @@ output "mit_saml_arn" {
   description = "MIT Identity provider arn (SAML Federated login)"
   value       = data.terraform_remote_state.global.outputs.mit_saml_arn
 }
+# IAM ROLES/PROFILES
 
+# SSM Profile name
+output "ssm_profile_name" {
+  description = "Name of the SSM profile for the GLOBAL environment"
+  value       = data.terraform_remote_state.global.outputs.ssm_profile_name
+}
 ##### Elastic Beanstalk Application Name Outputs #####
 
 output "docsvcs_app_name" {
@@ -210,12 +216,4 @@ output "deploy_rw_arn" {
 output "bastion_ingress_sgid" {
   description = "Security Group ID for access from Bastion host"
   value       = data.terraform_remote_state.bastion.outputs.ingress_from_bastion_sg_id
-}
-
-# IAM ROLES/PROFILES
-
-# SSM Profile name
-output "ssm_profile_name" {
-  description = "Name of the SSM profile for the GLOBAL environment"
-  value       = data.terraform_remote_state.core.outputs.ssm_profile_name
 }
