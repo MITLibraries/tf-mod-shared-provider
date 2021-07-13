@@ -50,3 +50,4 @@ When you add a new shared resource, you will also need to update this module wit
 | public\_zoneid | Route53 Public Zone ID |
 | public\_zonename | Route53 Public Zone name |
 | vpc\_id | VPC ID |
+| ssm_profile_name | SSM Profile Name | Name of the SSM profile for the GLOBAL environment
