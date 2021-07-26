@@ -1,12 +1,14 @@
-This module provides a layer of abstraction to accessing shared resources. It does not itself create any resources or maintain any state, it simply reads the state files of various shared resources. The goal is to hide some of the uglier, repetitive config blocks behind a clean interface.
+# Shared module for collecting remote state outputs
+
+This module provides a layer of abstraction to accessing shared resources. It does not itself create any resources or maintain any state, it simply reads the remote state files of various shared resources. The goal is to hide some of the uglier, repetitive config blocks behind a clean interface.
 
 When you add a new shared resource, you will also need to update this module with whatever outputs you want to provide access to.
 
 ## Inputs
 
-| Name      | Description  |  Type  | Default | Required |
-| --------- | ------------ | :----: | :-----: | :------: |
-| workspace | TF workspace | string |    "    |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| workspace | TF workspace | `string` | `""` | no |
 
 
 ## Outputs
@@ -49,5 +51,5 @@ When you add a new shared resource, you will also need to update this module wit
 | public\_subnets | List of public subnet IDs |
 | public\_zoneid | Route53 Public Zone ID |
 | public\_zonename | Route53 Public Zone name |
+| ssm\_profile\_name | Name of the SSM profile for the GLOBAL environment |
 | vpc\_id | VPC ID |
-| ssm_profile_name | SSM Profile Name | Name of the SSM profile for the GLOBAL environment
