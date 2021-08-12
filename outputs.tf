@@ -161,8 +161,44 @@ output "mit_saml_arn" {
   description = "MIT Identity provider arn (SAML Federated login)"
   value       = data.terraform_remote_state.global.outputs.mit_saml_arn
 }
-# IAM ROLES/PROFILES
 
+# Global SES outputs
+output "SES_bucket_admin_arn" {
+  description = "SES bucket policy which allows full admin"
+  value       = data.terraform_remote_state.global.outputs.SES_bucket_admin_arn
+}
+
+output "SES_bucket_arn" {
+  description = "SES bucket ARN"
+  value       = data.terraform_remote_state.global.outputs.SES_bucket_arn
+}
+
+output "SES_bucket_name" {
+  description = "SES bucket name"
+  value       = data.terraform_remote_state.global.outputs.SES_bucket_name
+}
+
+output "SES_bucket_ro_arn" {
+  description = "SES bucket policy which allows Read Only access"
+  value       = data.terraform_remote_state.global.outputs.SES_bucket_ro_arn
+}
+
+output "SES_bucket_rw_arn" {
+  description = "SES bucket policy which allows Read Only access"
+  value       = data.terraform_remote_state.global.outputs.SES_bucket_rw_arn
+}
+
+output "SES_policy_noreply_libraries_arn" {
+  description = "SES policy which allows sending as noreply@libraries.mit.edu"
+  value       = data.terraform_remote_state.global.outputs.SES_policy_noreply_libraries_arn
+}
+
+output "SES_policy_noreply_stage_mitlib_arn" {
+  description = "SES policy which allows sending as noreply-stage@mitlib.net"
+  value       = data.terraform_remote_state.global.outputs.SES_policy_noreply_stage_mitlib_arn
+}
+
+# SSM outputs
 # SSM Profile name
 output "ssm_profile_name" {
   description = "Name of the SSM profile for the GLOBAL environment"
