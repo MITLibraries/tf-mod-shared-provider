@@ -204,6 +204,24 @@ output "ssm_profile_name" {
   description = "Name of the SSM profile for the GLOBAL environment"
   value       = data.terraform_remote_state.global.outputs.ssm_profile_name
 }
+
+# Shared logging outputs
+output "logging_bucket_name" {
+  description = "The name of the consolidated logging bucket."
+  value       = data.terraform_remote_state.global.outputs.logging_bucket_name
+}
+
+output "logging_bucket_arn" {
+  description = "The ARN of the bucket for receiving all logging output"
+  value       = data.terraform_remote_state.global.outputs.logging_bucket_arn
+}
+
+output "logzio_role_arn" {
+  description = "The ARN of the IAM Role for Logzio to pull logs"
+  value       = data.terraform_remote_state.global.outputs.logzio_role_arn
+}
+
+
 ##### Elastic Beanstalk Application Name Outputs #####
 
 output "docsvcs_app_name" {
