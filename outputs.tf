@@ -229,31 +229,31 @@ output "docsvcs_app_name" {
   value       = data.terraform_remote_state.global.outputs.docsvcs_beanstalk_name
 }
 
-##### AWS ElasticSearch Outputs #####
-output "es_arn" {
-  description = "ARN of the Elasticsearch domain"
-  value       = data.terraform_remote_state.es.outputs.es_arn
-}
+# ##### AWS ElasticSearch Outputs #####
+# output "es_arn" {
+#   description = "ARN of the Elasticsearch domain"
+#   value       = data.terraform_remote_state.es.outputs.es_arn
+# }
 
-output "es_endpoint" {
-  description = "Domain-specific endpoint used to submit index, search, and data upload requests"
-  value       = data.terraform_remote_state.es.outputs.es_endpoint
-}
+# output "es_endpoint" {
+#   description = "Domain-specific endpoint used to submit index, search, and data upload requests"
+#   value       = data.terraform_remote_state.es.outputs.es_endpoint
+# }
 
-output "es_read_policy_arn" {
-  description = "Default domain read only policy ARN"
-  value       = data.terraform_remote_state.es.outputs.read_policy_arn
-}
+# output "es_read_policy_arn" {
+#   description = "Default domain read only policy ARN"
+#   value       = data.terraform_remote_state.es.outputs.read_policy_arn
+# }
 
-output "es_write_policy_arn" {
-  description = "Default domain write policy ARN"
-  value       = data.terraform_remote_state.es.outputs.write_policy_arn
-}
+# output "es_write_policy_arn" {
+#   description = "Default domain write policy ARN"
+#   value       = data.terraform_remote_state.es.outputs.write_policy_arn
+# }
 
-output "es_domain_name" {
-  description = "Domain name of cluster"
-  value       = data.terraform_remote_state.es.outputs.domain_name
-}
+# output "es_domain_name" {
+#   description = "Domain name of cluster"
+#   value       = data.terraform_remote_state.es.outputs.domain_name
+# }
 
 ##### Deploy Outputs #####
 output "deploy_bucket" {
